@@ -14,8 +14,6 @@ class Solution:
         # Round to 5 decimal places
         n = len(model_prediction)
         ydiff = model_prediction-ground_truth
-        print(ydiff)
         ypower = np.power(ydiff,2)
         ysum = np.sum(ypower)
-        print(ysum)
         return np.round(ysum/n,5)
